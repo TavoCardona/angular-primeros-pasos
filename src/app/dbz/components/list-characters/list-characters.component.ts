@@ -22,10 +22,10 @@ export class ListCharactersComponent {
   @Output()
   public onDeleteID: EventEmitter<string> = new EventEmitter();
 
-  onDeleteCharacter(characterIndex?: string): void {
-    console.log('este es el indiceeeeeeeee', characterIndex);
+  onDeleteCharacter(characterId?: string): void {
+    if ( !characterId ) return;
     
-    this.onDeleteID.emit(characterIndex);
+    this.onDeleteID.emit(characterId);
   }
 
 }

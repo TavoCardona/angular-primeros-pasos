@@ -9,12 +9,20 @@ import { DbzService } from '../services/dbz.service';
 })
 export class MainPageComponent {
   
-  constructor(public dbzService: DbzService){
+  constructor(private dbzService: DbzService) {}
+  
 
+  get characters(): Character[] {
+    return [...this.dbzService.characters];
   }
-  
 
-  
+  onDeleteCharacterSelect(id: string){
+    this.dbzService.onDeleteCharacterSelect(id);
+  }
+
+  onNewCharacterPush(character: Character){
+    this.dbzService.addCharacter(character);
+  }
 
 
 }
