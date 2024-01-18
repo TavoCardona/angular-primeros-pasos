@@ -8,6 +8,7 @@ import { AddCharactersComponent } from './components/add-characters/add-characte
 
 
 
+
 @NgModule({
   declarations: [
     MainPageComponent,
